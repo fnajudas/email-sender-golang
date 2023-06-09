@@ -7,16 +7,16 @@ import (
 )
 
 const (
-	CONFIG_SENDER_NAME   = "test send email <najudaf@gmail.com>"
-	CONFIG_AUTH_EMAIL    = "najudaf@gmail.com"
-	CONFIG_AUTH_PASSWORD = "kasianhahahaa"
+	CONFIG_SENDER_NAME   = "test send email <EMAIL_PENGIRIM>"
+	CONFIG_AUTH_EMAIL    = "EMAIL_PENGIRIM"
+	CONFIG_AUTH_PASSWORD = "SECRET_PASSWORD"
 	CONFIG_SMTP_HOST     = "smtp.gmail.com"
 	CONFIG_SMTP_PORT     = 587
 )
 
 func SendMail(subject, message string) error {
-	to := []string{"fatan@sentra-ip.co.id"}
-	cc := []string{"tralalala@gmail.com"}
+	to := []string{"EMAIL_TUJUAN"}
+	cc := []string{"EMAIL_TUJUAN_CC"}
 	body := "From : " + CONFIG_SENDER_NAME + "\n" +
 		"To: " + strings.Join(to, ",") + "\n" +
 		"Cc: " + strings.Join(to, ",") + "\n" +
